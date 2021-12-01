@@ -3,6 +3,10 @@ import './App.css';
 import Header from "./Header";
 import ContactList from "./ContactList";
 import AddContact from "./AddContact";
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faTrash)
 
 function App() {
   const contacts = [
