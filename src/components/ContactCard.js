@@ -9,7 +9,7 @@ const ContactCard = (props) => {
       <img src={user} alt="user" />
       <div>{name}</div>
       <div>{email}</div>
-      <div><FontAwesomeIcon icon="trash" /></div>
+      <div><FontAwesomeIcon icon="trash" onClick={() => props.onRemoveContact(id)} /></div>
     </div>
   )
 }
