@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import './App.css';
 import Header from "./Header";
 import ContactList from "./ContactList";
@@ -9,22 +9,16 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons'
 library.add(faTrash)
 
 function App() {
-  const contacts = [
-    {
-      id: 1,
-      name: "John D.",
-      email: "johny@example.com"
-    },
-    {
-      id: 2,
-      name: "Curt K.",
-      email: "curt@example.com"
-    }
-  ]
+  const [contacts, setContacts] = useState([]);
+
+  const handleAddContact = (contact) => {
+    console.log(contact);
+  }
+
   return (
     <div>
       <Header />
-      <AddContact />
+      <AddContact handleAddContact={handleAddContact} />
       <ContactList contacts={contacts} />
     </div>
   );
