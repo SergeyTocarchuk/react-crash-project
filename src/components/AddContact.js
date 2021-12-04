@@ -20,6 +20,7 @@ class AddContact extends Component {
       name: '',
       email: '',
     })
+    console.log(this.props)
   }
 
   render() {
